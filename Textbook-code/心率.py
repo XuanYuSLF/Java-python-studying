@@ -34,37 +34,37 @@ while lss:
             a = 170 - age
             if a <= dcxl:
                 print("您的运动心率正好", "适宜运动心率应为:", a, ",实际运动心率为", dcxl)
-            elif a > dcxl:
+            else:
                 print("您的运动心率过高", "适宜运动心率应为:", a, ",实际运动心率为", dcxl)
         elif age < 40:
-            e=True
-        while e:
-            H = float(input("请输入安静心率="))
-            if 50<=H<=300:
-                H=H
-                e=False
-            else:
-                print("请输入正确的安静心率")
-        r=True
-        while r:
-            nv = input("请输入男、女：")
-            if nv=="男" or "女":
-                nv=nv
-                if nv == "男":
-                    n = 220
-                elif nv == "女":
-                    n = 210
-                r=False
-            else:
-                print("请输入正确的性别")
-        low = (n - age - H) * 0.6 + H
-        high = (n - age - H) * 0.8 + H
-        if low <= dcxl <= high:
-            print("您的运动心率正好", "适宜运动心率应为:", low, "~", high, ",实际运动心率为", dcxl)
-        elif dcxl < low:
-            print("您的运动心率太低", "适宜运动心率应为:", low, "~", high, ",实际运动心率为", dcxl)
-        elif dcxl > high:
-            print("您的运动心率太高", "适宜运动心率应为:", low, "~", high, ",实际运动心率为", dcxl)
+            md=True
+            while md:
+                H = float(input("请输入安静心率="))
+                if 50<=H<=300:
+                    H=H
+                    md=False
+                else:
+                    print("请输入正确的安静心率")
+                r=True
+                while r:
+                    nv = input("请输入男、女：")
+                    if nv=="男" or "女":
+                        nv=nv
+                        if nv == "男":
+                            n = 220
+                    elif nv == "女":
+                            n = 210
+                    r=False
+                else:
+                    print("请输入正确的性别")
+            low = (n - age - H) * 0.6 + H
+            high = (n - age - H) * 0.8 + H
+            if low <= dcxl <= high:
+                print("您的运动心率正好", "适宜运动心率应为:", low, "~", high, ",实际运动心率为", dcxl)
+            elif dcxl < low:
+                print("您的运动心率太低", "适宜运动心率应为:", low, "~", high, ",实际运动心率为", dcxl)
+            elif dcxl > high:
+                print("您的运动心率太高", "适宜运动心率应为:", low, "~", high, ",实际运动心率为", dcxl)
 
         lss = False
     else:
