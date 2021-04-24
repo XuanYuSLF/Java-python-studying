@@ -54,7 +54,7 @@ while errorString3:
                         gender=gender
                         if gender == "男":
                             n = 220
-                    elif gender == "女":
+                        elif gender == "女":
                             n = 210
                     errorString5=False
                 else:

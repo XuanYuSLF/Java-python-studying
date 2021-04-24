@@ -1,5 +1,6 @@
 from tkinter import *
 from typing import AsyncGenerator
+
 #载入运行库
 def gender():
     global n
@@ -115,11 +116,14 @@ btn1.place(relx=0.3, rely=0.65, relwidth=0.3, relheight=0.05)
 btn2 = Button(root, text='开始运算', command=Calculation)
 btn2.place(relx=0.3, rely=0.7, relwidth=0.3, relheight=0.05)
 
+
+
+
+photo = PhotoImage(file='C:\Users\family\Desktop\Java-python-studying\Java-python-studying\python\背景.jpg')
+root.create_image(200, 150, image=photo)
+
 txt = Text(root)
 txt.place(rely=0.75, relheight=0.4)
-
-root.title('运动心率')
-
 root.geometry('500x500')
 root.mainloop()
 
