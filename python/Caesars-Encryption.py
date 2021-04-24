@@ -56,4 +56,4 @@ elif choice1==2:
             ciphertext.append(x)
     d=''.join(ciphertext)
     print(numberOfDigits,"π",d)
-s=input()
+exit=input("输入任何字符，回车即可结束本程序")
