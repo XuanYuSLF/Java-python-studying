@@ -32,15 +32,15 @@ while True:
                 offset1=int(input("请输入π的第几位(1~32):"))
                 if 1<=offset1<=32:
                     break
-                else:
-                    print("输入错误")
+                else:print("输入错误")
             number=int(pi[offset1-1])
         elif choice1==3:
             list1=[]
             list1=list(input("请输入自定义数列(只填写数字):"))
             totalList1=len(list1)
             while True:
-                offset=int(input("请输入数列的第几位:"))
+                offset1=int(input("请输入数列的第几位:"))
+                if 1<=offset1<=totalList1:
                 if 0<offset<totalList1:
                     break
                 else:
