@@ -3,8 +3,9 @@ root = Tk()
 
 def Calculation():
     decrypt=inp1.get()
-    list1=int(inp2.get())
+    list2=int(inp2.get())
     text=[]
+    n=[]
     list2=[]
     list1=list(decrypt)
     for s in decrypt:
@@ -12,15 +13,15 @@ def Calculation():
             break
         else:
             b=s
-        list2.append(b)
-    offset=int(''.join(list2))
+        n.append(b)
+    offset=int(''.join(n))
     if "π" in list1:
         pi=['3', '1', '4', '1', '5', '9', '2', '6', '5', '3', '5', '8', '9', '7', '9', '3', '2', '3', '8', '4', '6', '2', '6', '4', '3', '3', '8', '3', '2', '7', '9', '5']
         number=int(pi[offset-1])
     elif "&" in list1:
         number=offset
     elif "$" in list1:
-        number=int(list1[offset-1])
+        number=int(list2[offset-1])
     for p in decrypt:
         if "a" <= p<= "z":
             x=str(chr(ord("a")+(ord(p)-ord("a")-number)%26))

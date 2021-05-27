@@ -13,8 +13,7 @@ while True:
                 break
             elif choice1==3:
                 break
-            else:
-                print("输入错误")
+            else:print("输入错误")
         if choice1==1:
             choice2="&"
             offset=int(input("请输入偏量(输入0为随机)"))
@@ -41,12 +40,10 @@ while True:
             while True:
                 offset1=int(input("请输入数列的第几位:"))
                 if 1<=offset1<=totalList1:
-                if 0<offset<totalList1:
                     break
-                else:
-                    print("输入错误，请输入正确的偏移量")
-                number=int(list1[offset-1])
-                choice2="$"
+                else:print("输入错误")          
+            number=int(list1[offset1-1])
+            choice2="$"
         for p in unencrypted:
             if "a" <= p<= "z":
                 x=str(chr(ord("a")+(ord(p)-ord("a")+number)%26))
